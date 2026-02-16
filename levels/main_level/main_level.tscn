@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cfwwxrdgq48hk"]
+
+[ext_resource type="PackedScene" uid="uid://b1bk1xrxsk4cs" path="res://player/player.tscn" id="1_7q3gx"]
+[ext_resource type="Shader" uid="uid://bwq0wdlq4pyb8" path="res://levels/main_level/view_shader2.gdshader" id="1_b2fg0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_438kw"]
+shader = ExtResource("1_b2fg0")
+shader_parameter/dithering = true
+shader_parameter/dithering_size = 16
+shader_parameter/resolution_scale = 2
+shader_parameter/threshold = 60.0
+shader_parameter/white = Color(1, 1, 1, 1)
+shader_parameter/black = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fmfgi"]
+
+[sub_resource type="Environment" id="Environment_7q3gx"]
+background_mode = 1
+ambient_light_source = 1
+reflected_light_source = 1
+
+[node name="main_level" type="Node3D" unique_id=1780261720]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=2058632142]
+material = SubResource("ShaderMaterial_438kw")
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1588745403]
+handle_input_locally = false
+size = Vector2i(1440, 960)
+render_target_update_mode = 4
+
+[node name="level" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=744850156]
+
+[node name="floor" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/level" unique_id=888177346]
+transform = Transform3D(8.658431, 0, 0, 0, 0.20762491, 0, 0, 0, 7.2348013, 0, 0, 0)
+mesh = SubResource("BoxMesh_fmfgi")
+
+[node name="wall" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/level" unique_id=141255558]
+transform = Transform3D(8.658431, 0, 0, 0, -9.075573e-09, -7.2348013, 0, 0.2076249, -3.162432e-07, 0, 0, 3.5320778)
+mesh = SubResource("BoxMesh_fmfgi")
+
+[node name="wall2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/level" unique_id=937625520]
+transform = Transform3D(8.658431, 0, 0, 0, -9.075573e-09, -7.2348013, 0, 0.2076249, -3.162432e-07, 0, 0, -3.499483)
+mesh = SubResource("BoxMesh_fmfgi")
+
+[node name="wall3" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/level" unique_id=1293722012]
+transform = Transform3D(-3.7847204e-07, 0.2076249, -3.1624322e-07, 0, -9.075574e-09, -7.2348013, -8.658431, -9.075572e-09, -1.1879749e-14, -3.9231267, 0, 0.14526224)
+mesh = SubResource("BoxMesh_fmfgi")
+
+[node name="wall4" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/level" unique_id=470204302]
+transform = Transform3D(-3.7847204e-07, 0.2076249, -3.1624322e-07, 0, -9.075574e-09, -7.2348013, -8.658431, -9.075572e-09, -1.1879749e-14, 4.183045, 0, 0.14526224)
+mesh = SubResource("BoxMesh_fmfgi")
+
+[node name="kastil" type="Node3D" parent="SubViewportContainer/SubViewport/level" unique_id=719710940]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.9428358, 1.8749263, 0)
+
+[node name="player" parent="SubViewportContainer/SubViewport/level/kastil" unique_id=1198678361 instance=ExtResource("1_7q3gx")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=1066455373]
+environment = SubResource("Environment_7q3gx")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1601386088]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.3066797, 6.9336214, 0)
+spot_range = 71.345406
