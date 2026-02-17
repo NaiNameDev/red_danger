@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dubqwnaihbvqf"]
+
+[ext_resource type="Script" uid="uid://dypgvrcvsj48v" path="res://paper.gd" id="1_iibti"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_iibti"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iibti"]
+size = Vector3(0.44415283, 0.08190918, 0.7253876)
+
+[node name="paper" type="Area3D" unique_id=912483782]
+script = ExtResource("1_iibti")
+metadata/_custom_type_script = "uid://d3liwbagkq8rc"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=829632411]
+transform = Transform3D(0.47686756, 0, 0, 0, 0.040956914, 0, 0, 0, 0.71147025, 0, 0, 0)
+mesh = SubResource("BoxMesh_iibti")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1193450220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015838623, -0.010803223, -0.0037765503)
+shape = SubResource("BoxShape3D_iibti")
+
+[node name="l" type="Label3D" parent="." unique_id=880849961]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0, 0.021, 0.29011476)
+text = "PERSONAL FILE"
+
+[node name="l2" type="Label3D" parent="." unique_id=1343248716]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0, 0.021, 0.048597038)
+text = "BACKGROUND"
+font_size = 30
+
+[node name="info" type="Node3D" parent="." unique_id=1211071016]
+
+[node name="name" type="Label3D" parent="info" unique_id=1358486142]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.2197471)
+text = "PERSONAL FILE"
+font_size = 24
+horizontal_alignment = 0
+
+[node name="scname" type="Label3D" parent="info" unique_id=661774367]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.17068586)
+text = "PERSONAL FILE"
+font_size = 24
+horizontal_alignment = 0
+
+[node name="age" type="Label3D" parent="info" unique_id=1142614416]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.12363887)
+text = "PERSONAL FILE"
+font_size = 24
+horizontal_alignment = 0
+
+[node name="bg" type="Label3D" parent="info" unique_id=1041978164]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.015638411)
+text = "PERSONAL FILE"
+font_size = 24
+horizontal_alignment = 0

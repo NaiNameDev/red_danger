@@ -4,5 +4,10 @@
 
 [node name="player" type="Node3D" unique_id=865513462]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=445450418]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=445450418 node_paths=PackedStringArray("interaction_ray")]
 script = ExtResource("1_oul6g")
+interaction_ray = NodePath("RayCast3D")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=2021968377]
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
