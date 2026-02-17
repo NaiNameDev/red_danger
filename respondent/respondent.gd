@@ -18,11 +18,11 @@ static var C_background: Array[String] = ["Office worker", "Builder", "Seamstres
 static var D_background: Array[String] = ["Shoe shiner", "Homeless", "Unemployed", "Cleaner", "Newspaper delivery boy"]
 static var E_background: Array[String] = ["Slave", "Socialist", "Murderer", "Scammer", "Prostitute"]
 
-static var A_accusation: Array[String] = ["Took down the poster", "Violated traffic rules", "Violated curfew", "Late in paying taxes", "Impolite behavior"]
-static var B_accusation: Array[String] = ["Factory worker", "Soldier", "Miner", "Farmer", "Scientist"]
-static var C_accusation: Array[String] = ["spoke neutrally about socialism", "Builder", "Seamstress", "Waiter", "Servant"]
-static var D_accusation: Array[String] = ["Shoe shiner", "Homeless", "Unemployed", "Cleaner", "Newspaper delivery boy"]
-static var E_accusation: Array[String] = ["Agitation to join the Communist Party", "Socialist Literature", "Murder", "Scammer", "Prostitute"]
+static var A_accusation: Array[String] = ["Bar fight", "Violated traffic rules", "Violated curfew", "Late in paying taxes", "Impolite behavior"]
+static var B_accusation: Array[String] = ["Alcohol abuse", "Pickpocketing", "Sleeping outside", "Drug addict", "Disrespectful communication with the bourgeoisie"]
+static var C_accusation: Array[String] = ["Spoke neutrally about socialism", "Alcoholism", "Took down the poster", "Petty theft", "An acquaintance was accused of aiding the revolutionaries"]
+static var D_accusation: Array[String] = ["Illegal literature (not socialist)", "Embezzlement of funds", "Spoke unflatteringly about the government", "Escape from slavery", "Symbols of the Communists"]
+static var E_accusation: Array[String] = ["Agitation to join the Communist Party", "Socialist Literature", "Refusal to work", "Participation in the strike", "Called for a revolution"]
 
 var economy_grade: grades
 var loyalty_grade: grades
@@ -36,7 +36,7 @@ var accusation: String
 static func random_respondent() -> Respondent:
 	var ret: Respondent = new()
 	
-	ret.age = randi_range(13,75)
+	ret.age = randi_range(18,75)
 	
 	ret.is_male = randi_range(0,1) == 0
 	if ret.is_male: ret.name = male_names.pick_random()
@@ -44,7 +44,9 @@ static func random_respondent() -> Respondent:
 	ret.scname = second_names.pick_random()
 	
 	ret.economy_grade = randi_range(0,4)
-	match ret.economy_grade:
+	match ret.economy_grade + randi_range(-1,1):
+		-1:
+			ret.background = A_background.pick_random()
 		0:
 			ret.background = A_background.pick_random()
 		1:
@@ -55,6 +57,23 @@ static func random_respondent() -> Respondent:
 			ret.background = D_background.pick_random()
 		4:
 			ret.background = E_background.pick_random()
+		5:
+			ret.background = E_background.pick_random()
 	ret.loyalty_grade = randi_range(0,4)
+	match ret.loyalty_grade + randi_range(-1,1):
+		-1:
+			ret.accusation = A_accusation.pick_random()
+		0:
+			ret.accusation = A_accusation.pick_random()
+		1:
+			ret.accusation = B_accusation.pick_random()
+		2:
+			ret.accusation = C_accusation.pick_random()
+		3:
+			ret.accusation = D_accusation.pick_random()
+		4:
+			ret.accusation = E_accusation.pick_random()
+		5:
+			ret.accusation = E_accusation.pick_random()
 	
 	return ret
