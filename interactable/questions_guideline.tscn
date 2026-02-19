@@ -52,6 +52,6 @@ horizontal_alignment = 0
 [node name="4" type="Label3D" parent="info" unique_id=1912843234]
 transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.26891753)
 text = "{R} - how do you feel
-about socialism"
+about socialism?"
 font_size = 24
 horizontal_alignment = 0
