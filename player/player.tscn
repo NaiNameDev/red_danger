@@ -8,7 +8,6 @@
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=445450418 node_paths=PackedStringArray("interaction_ray")]
 script = ExtResource("1_oul6g")
-sens = null
 interaction_ray = NodePath("RayCast3D")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=2021968377]

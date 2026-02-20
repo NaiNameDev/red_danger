@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ckr7suhbtf2im"]
+
+[ext_resource type="Script" uid="uid://cunv43pgnavx3" path="res://levels/main_level/counter.gd" id="1_04r2s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04r2s"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wxuh7"]
+
+[node name="counter" type="Node3D" unique_id=75175227]
+script = ExtResource("1_04r2s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=279701074]
+transform = Transform3D(0.110532045, 0, 0, 0, 0.2329392, 0, 0, 0, 1.3649774, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_04r2s")
+mesh = SubResource("BoxMesh_wxuh7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=263623400]
+transform = Transform3D(0.15629484, 0, 0, 0, 0.044549655, 0, 0, 0, 1.3649774, 0, 0.12550634, 0)
+mesh = SubResource("BoxMesh_wxuh7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1309329349]
+transform = Transform3D(0.15629484, 0, 0, 0, 0.21926364, 0, 0, 0, 0.040047053, 0, -0.00397262, 0.6634832)
+mesh = SubResource("BoxMesh_wxuh7")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=40094779]
+transform = Transform3D(0.15629484, 0, 0, 0, 0.21926364, 0, 0, 0, 0.040047053, 0, -0.00397262, -0.6660294)
+mesh = SubResource("BoxMesh_wxuh7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2051297573]
+transform = Transform3D(0.15629484, 0, 0, 0, 0.044549655, 0, 0, 0, 1.3649774, 0, -0.11690545, 0)
+mesh = SubResource("BoxMesh_wxuh7")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=692754214]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.056424767, 0.0045783967, 0)
+text = "323"
+font_size = 24

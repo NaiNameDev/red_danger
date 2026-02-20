@@ -5,3 +5,4 @@ signal interacted
 
 func interact(interactor: Node3D):
 	print(interactor.name)
+	interacted.emit()

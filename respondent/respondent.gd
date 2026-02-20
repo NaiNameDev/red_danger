@@ -38,6 +38,64 @@ var q2_answear: AudioStream
 var q3_answear: AudioStream
 var q4_answear: AudioStream
 
+func pick_answears():
+	var base_path = "res://respondent/answears/"
+	var rda_sound_path = base_path + "RDA/RDA_" + ("male" if is_male else "female") + ".wav"
+	
+	match economy_grade:
+		0:
+			var path = base_path + "Q1A/Q1A_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q1_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q2A/Q2A_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q2_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		1:
+			var path = base_path + "Q1C/Q1C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q1_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q2C/Q2C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q2_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		2:
+			var path = base_path + "Q1C/Q1C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q1_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q2C/Q2C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q2_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		3:
+			var path = base_path + "Q1C/Q1C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q1_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q2C/Q2C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q2_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		4:
+			var path = base_path + "Q1E/Q1E_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q1_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q2E/Q2E_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q2_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+	
+	match loyalty_grade:
+		0:
+			var path = base_path + "Q3A/Q3A_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q3_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q4A/Q4A_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q4_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		1:
+			var path = base_path + "Q3C/Q3C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q3_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q4C/Q4C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q4_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		2:
+			var path = base_path + "Q3C/Q3C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q3_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q4C/Q4C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q4_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		3:
+			var path = base_path + "Q3C/Q3C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q3_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q4C/Q4C_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q4_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+		4:
+			var path = base_path + "Q3E/Q3E_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q3_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+			path = base_path + "Q4E/Q4E_" + ("male" if is_male else "female") + str(randi_range(1,2))
+			q4_answear = load(path + ".wav") if randi_range(0,10) != 0 else load(rda_sound_path)
+
 static func random_respondent() -> Respondent:
 	var ret: Respondent = new()
 	
@@ -48,93 +106,40 @@ static func random_respondent() -> Respondent:
 	else: ret.name = female_name.pick_random()
 	ret.scname = second_names.pick_random()
 	
-	ret.economy_grade = randi_range(0,4)
-	match ret.economy_grade + randi_range(-1,1):
+	ret.economy_grade = randi_range(0,4) as grades
+	match ret.economy_grade + randi_range(-1,1) as grades:
 		-1:
 			ret.background = A_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1A/"))
-			ret.q1_answear = load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2A/"))
-			ret.q2_answear = load(files2.pick_random())
 		0:
 			ret.background = A_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1A/"))
-			ret.q1_answear = load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2A/"))
-			ret.q2_answear = load(files2.pick_random())
 		1:
 			ret.background = B_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1A/"))
-			ret.q1_answear = load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2A/"))
-			ret.q2_answear = load(files2.pick_random())
 		2:
 			ret.background = C_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1C/"))
-			ret.q1_answear = load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2C/"))
-			ret.q2_answear = load(files2.pick_random())
 		3:
 			ret.background = D_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1C/"))
-			ret.q1_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2C/"))
-			ret.q2_answear =load(files2.pick_random())
 		4:
 			ret.background = E_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1C/"))
-			ret.q1_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2C/"))
-			ret.q2_answear =load(files2.pick_random())
 		5:
 			ret.background = E_background.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q1E/"))
-			ret.q1_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q2E/"))
-			ret.q2_answear =load(files2.pick_random())
-	ret.loyalty_grade = randi_range(0,4)
-	match ret.loyalty_grade + randi_range(-1,1):
+
+	ret.loyalty_grade = randi_range(0,4) as grades
+	match ret.loyalty_grade + randi_range(-1,1) as grades:
 		-1:
 			ret.accusation = A_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3A/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4A/"))
-			ret.q4_answear =load(files2.pick_random())
 		0:
 			ret.accusation = A_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3A/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4A/"))
-			ret.q4_answear =load(files2.pick_random())
 		1:
 			ret.accusation = B_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3A/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4A/"))
-			ret.q4_answear =load(files2.pick_random())
 		2:
 			ret.accusation = C_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3C/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4C/"))
-			ret.q4_answear =load(files2.pick_random())
 		3:
 			ret.accusation = D_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3C/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4C/"))
-			ret.q4_answear =load(files2.pick_random())
 		4:
 			ret.accusation = E_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3C/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4C/"))
-			ret.q4_answear =load(files2.pick_random())
 		5:
 			ret.accusation = E_accusation.pick_random()
-			var files: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q3E/"))
-			ret.q3_answear =load(files.pick_random())
-			var files2: Array = Array(DirAccess.get_files_at("res://respondent/answears/Q4E/"))
-			ret.q4_answear =load(files2.pick_random())
+	
+	ret.pick_answears()
 	
 	return ret
