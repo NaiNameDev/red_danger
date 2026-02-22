@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cjvvfr7e7tcom"
-path="res://.godot/imported/printer.glb-43c56ba9206d5afa7a2615abd6009214.scn"
+uid="uid://dmsgxvndeqf3t"
+path="res://.godot/imported/citizen3.glb-f6134df8acd1fed9165d156c546ac93b.scn"
 
 [deps]
 
-source_file="res://levels/deco/printer.glb"
-dest_files=["res://.godot/imported/printer.glb-43c56ba9206d5afa7a2615abd6009214.scn"]
+source_file="res://levels/main_level/humans/citizen3.glb"
+dest_files=["res://.godot/imported/citizen3.glb-f6134df8acd1fed9165d156c546ac93b.scn"]
 
 [params]
 

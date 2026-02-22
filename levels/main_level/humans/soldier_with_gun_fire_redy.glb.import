@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://diqavephv24mb"
-path="res://.godot/imported/doc_storage.glb-524708e336108de02dd383a2ba519087.scn"
+uid="uid://cn48u5bhie8qb"
+path="res://.godot/imported/soldier_with_gun_fire_redy.glb-d056f960fc91b22c27145bde5b4f8730.scn"
 
 [deps]
 
-source_file="res://levels/deco/doc_storage.glb"
-dest_files=["res://.godot/imported/doc_storage.glb-524708e336108de02dd383a2ba519087.scn"]
+source_file="res://levels/main_level/humans/soldier_with_gun_fire_redy.glb"
+dest_files=["res://.godot/imported/soldier_with_gun_fire_redy.glb-d056f960fc91b22c27145bde5b4f8730.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://yognnxsxs8fq"
-path="res://.godot/imported/chair.glb-49476ea049647da036afbc7a838168ec.scn"
+uid="uid://dcleekri8spps"
+path="res://.godot/imported/radio.glb-41f3430ebcb83b6e391497d40f232a86.scn"
 
 [deps]
 
-source_file="res://levels/deco/chair.glb"
-dest_files=["res://.godot/imported/chair.glb-49476ea049647da036afbc7a838168ec.scn"]
+source_file="res://levels/tutorial/radio.glb"
+dest_files=["res://.godot/imported/radio.glb-41f3430ebcb83b6e391497d40f232a86.scn"]
 
 [params]
 

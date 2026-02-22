@@ -47,6 +47,17 @@ func press(grade: Respondent.grades):
 		$rank_machine/E/Interactable/CollisionShape3D.disabled = true
 		
 		choise.emit(loyaltyg, profitg)
+		await get_tree().create_timer(0.3).timeout
+		$MetalDrop.play()
+
+func reset():
+	$rank_machine/Cube_007/MODE.text = "LOYALITY"
+	var twn: Tween = create_tween()
+	twn.set_trans(Tween.TRANS_QUINT)
+	twn.set_ease(Tween.EASE_IN_OUT)
+	twn.tween_property($paper, "position", $paper.position - Vector3(0,0,0.1), 1.0)
+	is_first = true
+	can_be_picked = true
 
 func interact(interactor: Node3D):
 	if can_be_picked:
@@ -57,6 +68,7 @@ func interact(interactor: Node3D):
 		twn2.set_trans(Tween.TRANS_QUART)
 		twn2.set_ease(Tween.EASE_IN_OUT)
 		if !interactor.is_picked:
+			$MetalSlide.play()
 			last_picker = interactor
 			interactor.is_picked = true
 			twn.tween_property(self, "global_position", interactor.global_position + -interactor.global_basis.z/1.7, 1.0)
@@ -77,3 +89,5 @@ func interact(interactor: Node3D):
 		twn.tween_property(self, "position", Vector3(0.0,0.0,0.0), 1.0)
 		twn2.tween_property(self, "rotation", Vector3(0.0, 0.0, 0.0), 1.0)
 		interactor.is_picked = false
+		await get_tree().create_timer(0.3).timeout
+		$MetalDrop.play()

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfow60v7xrd18"
-path.s3tc="res://.godot/imported/printer_Untitled.png-d9e1919dea831af074bf1556cc3bdb22.s3tc.ctex"
+uid="uid://dcbkd2oaj7cel"
+path.s3tc="res://.godot/imported/soldier_tPOSE2_man.png-7fc8affc42dd9ccb318b066784be784b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "571de1e9e76efd099692c47bf9e1bc58"
+"md5": "5af4adeefc37f1dbab70ea2893c735fb"
 }
 
 [deps]
 
-source_file="res://levels/deco/printer_Untitled.png"
-dest_files=["res://.godot/imported/printer_Untitled.png-d9e1919dea831af074bf1556cc3bdb22.s3tc.ctex"]
+source_file="res://test/soldier_tPOSE2_man.png"
+dest_files=["res://.godot/imported/soldier_tPOSE2_man.png-7fc8affc42dd9ccb318b066784be784b.s3tc.ctex"]
 
 [params]
 

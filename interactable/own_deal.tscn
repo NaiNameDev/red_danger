@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dubqwnaihbvqf"]
 
 [ext_resource type="Script" uid="uid://dypgvrcvsj48v" path="res://interactable/own_deal.gd" id="1_iibti"]
+[ext_resource type="AudioStream" uid="uid://c2c3d7s5vbu3s" path="res://levels/main_level/sound/paper+pick.wav" id="3_gcrpb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_iibti"]
 
@@ -68,3 +69,7 @@ horizontal_alignment = 0
 vertical_alignment = 0
 autowrap_mode = 1
 width = 300.0
+
+[node name="pick" type="AudioStreamPlayer3D" parent="." unique_id=1676158573]
+stream = ExtResource("3_gcrpb")
+volume_db = -30.0

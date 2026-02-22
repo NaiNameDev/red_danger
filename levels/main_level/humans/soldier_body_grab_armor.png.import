@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uptprtkjmgp8"
-path.s3tc="res://.godot/imported/doc_storage_Untitled.png-e09bb18be5f0debbfd071d6e5257b71d.s3tc.ctex"
+uid="uid://dmh0rurxmbc4i"
+path.s3tc="res://.godot/imported/soldier_body_grab_armor.png-10b708de5030383b6073b673fc40434d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "8f7f5812aa052c19d43eddcc49045667"
+"md5": "890b88a6c468d94b121a214635cbde3f"
 }
 
 [deps]
 
-source_file="res://levels/deco/doc_storage_Untitled.png"
-dest_files=["res://.godot/imported/doc_storage_Untitled.png-e09bb18be5f0debbfd071d6e5257b71d.s3tc.ctex"]
+source_file="res://levels/main_level/humans/soldier_body_grab_armor.png"
+dest_files=["res://.godot/imported/soldier_body_grab_armor.png-10b708de5030383b6073b673fc40434d.s3tc.ctex"]
 
 [params]
 

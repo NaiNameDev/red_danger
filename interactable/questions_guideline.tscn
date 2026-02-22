@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btjvagncn7u0c"]
 
 [ext_resource type="Script" uid="uid://dnhq16fh7jg0n" path="res://interactable/questions_guideline.gd" id="1_o74x5"]
+[ext_resource type="AudioStream" uid="uid://c2c3d7s5vbu3s" path="res://levels/main_level/sound/paper+pick.wav" id="2_06fuq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_iibti"]
 
@@ -20,7 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005203247, -0.010803223, -
 shape = SubResource("BoxShape3D_iibti")
 
 [node name="l" type="Label3D" parent="." unique_id=880849961]
-transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0, 0.0023594517, 0.26453668)
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0, 0.0023594517, 0.27874744)
 text = "QUESTIONS
 GUIDELINE"
 
@@ -28,21 +29,33 @@ GUIDELINE"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.018640548, 0)
 
 [node name="1" type="Label3D" parent="info" unique_id=1358486142]
-transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.14334235)
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.11523372)
 text = "{Q} - Do you like
 working for the country?"
 font_size = 24
 horizontal_alignment = 0
 
+[node name="5" type="Label3D" parent="info" unique_id=1479401699]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.18085226)
+text = "economic utility:"
+font_size = 24
+horizontal_alignment = 0
+
+[node name="6" type="Label3D" parent="info" unique_id=1229138049]
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.07652587)
+text = "loyalty:"
+font_size = 24
+horizontal_alignment = 0
+
 [node name="2" type="Label3D" parent="info" unique_id=661774367]
-transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.042826638)
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, 0.014718011)
 text = "{W} - Will you work
 for the rest of your life?"
 font_size = 24
 horizontal_alignment = 0
 
 [node name="3" type="Label3D" parent="info" unique_id=1142614416]
-transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.14265573)
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.17123325)
 text = "{E} - Do you think that
 the world’s resources
 are not distributed fairly?"
@@ -50,8 +63,12 @@ font_size = 24
 horizontal_alignment = 0
 
 [node name="4" type="Label3D" parent="info" unique_id=1912843234]
-transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.26891753)
+transform = Transform3D(-0.3, -4.5298744e-08, -1.980071e-15, 0, -1.3113417e-08, 0.3, -4.5298744e-08, 0.3, 1.3113417e-08, 0.21319437, 0.021, -0.29749507)
 text = "{R} - how do you feel
 about socialism?"
 font_size = 24
 horizontal_alignment = 0
+
+[node name="pick" type="AudioStreamPlayer3D" parent="." unique_id=829079628]
+stream = ExtResource("2_06fuq")
+volume_db = -30.0

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bcxeugugknaom"
-path="res://.godot/imported/clock.glb-61d58baf101de57c23f9e6f4c5576665.scn"
+uid="uid://dxqh8ioadx4db"
+path="res://.godot/imported/citizen3.glb-a99f26b8961bb8cb8dc404b2f9e903c6.scn"
 
 [deps]
 
-source_file="res://levels/deco/clock.glb"
-dest_files=["res://.godot/imported/clock.glb-61d58baf101de57c23f9e6f4c5576665.scn"]
+source_file="res://interactable/sound/citizen3.glb"
+dest_files=["res://.godot/imported/citizen3.glb-a99f26b8961bb8cb8dc404b2f9e903c6.scn"]
 
 [params]
 

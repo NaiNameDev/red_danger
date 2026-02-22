@@ -21,8 +21,8 @@ static var E_background: Array = ["Slave", "Socialist", "Murderer", "Scammer", "
 static var A_accusation: Array = ["Bar fight", "Violated traffic rules", "Violated curfew", "Late in paying taxes", "Impolite behavior"]
 static var B_accusation: Array = ["Alcohol abuse", "Pickpocketing", "Sleeping outside", "Drug addict", "Disrespectful communication with the bourgeoisie"]
 static var C_accusation: Array = ["Spoke neutrally about socialism", "Alcoholism", "Took down the poster", "Petty theft", "An acquaintance was accused of aiding the revolutionaries"]
-static var D_accusation: Array = ["Illegal literature (not socialist)", "Embezzlement of funds", "Spoke unflatteringly about the government", "Escape from slavery", "Symbols of the Communists"]
-static var E_accusation: Array = ["Agitation to join the Communist Party", "Socialist Literature", "Refusal to work", "Participation in the strike", "Called for a revolution"]
+static var D_accusation: Array = ["Illegal literature (not socialist)", "Embezzlement of funds", "Spoke unflatteringly about the government", "Escape from slavery", "Participation in the strike"]
+static var E_accusation: Array = ["Agitation to join the Communist Party", "Socialist Literature", "Refusal to work", "Symbols of the Communists", "Called for a revolution"]
 
 var economy_grade: grades
 var loyalty_grade: grades

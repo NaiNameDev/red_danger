@@ -12,6 +12,7 @@ func interact(interactor: Node3D):
 		twn.set_trans(Tween.TRANS_QUART)
 		twn.set_ease(Tween.EASE_IN_OUT)
 		twn.tween_property($"..", "position", Vector3($"..".position.x, $"..".position.y - 0.006,$"..".position.z), 0.3)
+		$"../../../AudioStreamPlayer3D".play()
 		await get_tree().create_timer(0.4).timeout
 		var twn2: Tween = create_tween()
 		twn2.set_trans(Tween.TRANS_QUART)

@@ -24,6 +24,41 @@ position = Vector2(720, 480)
 scale = Vector2(4.0000153, 4.0000153)
 texture = SubResource("CanvasTexture_oul6g")
 
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1610910926]
+visible = false
+offset_right = 1440.0
+offset_bottom = 960.0
+
+[node name="cnt" type="Button" parent="CanvasLayer/Panel" unique_id=2040965567]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 724.0
+offset_right = 880.0
+offset_bottom = 804.0
+theme_override_font_sizes/font_size = 36
+text = "Continue"
+
+[node name="men" type="Button" parent="CanvasLayer/Panel" unique_id=966365146]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 814.0
+offset_right = 880.0
+offset_bottom = 894.0
+theme_override_font_sizes/font_size = 36
+text = "Main menu"
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1781574368]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 484.0
+offset_right = 928.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 136
+text = "Menu"
+
 [node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=217355842]
 doppler_tracking = 2
 current = true
+
+[connection signal="pressed" from="CanvasLayer/Panel/cnt" to="Camera3D" method="_on_cnt_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/men" to="Camera3D" method="_on_men_pressed"]

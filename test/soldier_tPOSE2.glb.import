@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dl4gqnyvjyfkq"
-path="res://.godot/imported/garbage_can.glb-4662629f8bf62f9e9103851b37f91bb9.scn"
+uid="uid://bt1adgxmm2dfa"
+path="res://.godot/imported/soldier_tPOSE2.glb-6f39977fa3fcceb733f8e628c16c6a16.scn"
 
 [deps]
 
-source_file="res://levels/deco/garbage_can.glb"
-dest_files=["res://.godot/imported/garbage_can.glb-4662629f8bf62f9e9103851b37f91bb9.scn"]
+source_file="res://test/soldier_tPOSE2.glb"
+dest_files=["res://.godot/imported/soldier_tPOSE2.glb-6f39977fa3fcceb733f8e628c16c6a16.scn"]
 
 [params]
 
